@@ -1,0 +1,57 @@
+header:
+  version: 18
+machine: qemux86-64
+distro: rpi3-distro
+build_system: oe
+target: core-image-base
+repos:
+
+  openembedded-core:
+    url: "https://github.com/openembedded/openembedded-core.git"
+    branch: "scarthgap"        
+    path: "/home/hamza/yocto/layers/oe-core"
+    layers:
+      meta: 
+
+  bitbake:
+    url: "https://github.com/openembedded/bitbake.git"
+    branch: "2.8"
+    path: "/home/hamza/yocto/layers/oe-core/bitbake"
+    layers:
+      bitbake: excluded
+  meta_raspberrypi:
+    url: "https://github.com/agherzan/meta-raspberrypi.git"
+    path: "/home/hamza/yocto/layers/meta-raspberrypi"
+    branch: "scarthgap"
+  meta-tech-distro:
+    path: "../meta-tech-distro"
+  meta-tech-bsp:
+    path: "../meta-tech-bsp"
+  meta-tech-prj:
+    path: "../meta-tech-prj"
+    
+bblayers_conf_header:
+  standard: |
+    POKY_BBLAYERS_CONF_VERSION = "2"
+    BBPATH = "${TOPDIR}"
+    BBFILES ?= ""
+local_conf_header:
+    custom-local-conf: |
+        ACCEPT_FSL_EULA = "1"
+        DL_DIR = "/home/hamza/yocto/work/downloads"
+        SSTATE_DIR = "/home/hamza/yocto/work/sstate-cache"
+        BB_CURRENT_MC = "default"
+        SPDX_GENERATE = "0"
+        INHERIT:remove = "create-spdx"
+        INHERIT += "buildhistory"
+        BUILDHISTORY_COMMIT = "1"
+        INHERIT += "cve-check"
+        PREFERRED_PROVIDER_tar = "busybox"
+        PREFERRED_PROVIDER_coreutils = "busybox"
+        INCOMPATIBLE_LICENSE = "GPL-3.0* LGPL-3.0* AGPL-3.0*"
+        
+        
+
+
+        
+
