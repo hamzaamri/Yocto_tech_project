@@ -1,0 +1,4 @@
+Kas/build/buildhistory/*
+Kas/build/cache/*
+Kas/build/tmp-glibc-glibc/*
+.kas_shell_history
