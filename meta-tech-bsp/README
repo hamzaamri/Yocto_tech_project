@@ -1,41 +1,11 @@
-This README file contains information on the contents of the meta-tech-bsp layer.
-
-Please see the corresponding sections below for details.
-
-Dependencies
-============
-
-  URI: <first dependency>
-  branch: <branch name>
-
-  URI: <second dependency>
-  branch: <branch name>
-
-  .
-  .
-  .
-
-Patches
-=======
-
-Please submit any patches against the meta-tech-bsp layer to the xxxx mailing list (xxxx@zzzz.org)
-and cc: the maintainer:
-
-Maintainer: XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
-
-Table of Contents
-=================
-
-  I. Adding the meta-tech-bsp layer to your build
- II. Misc
-
-
-I. Adding the meta-tech-bsp layer to your build
-=================================================
-
-Run 'bitbake-layers add-layer meta-tech-bsp'
-
-II. Misc
-========
-
---- replace with specific information about the meta-tech-bsp layer ---
+Custom machine development with raspberrypi3. 
+Custom machine distinguished by :
+  - Control every machine feature
+  - Remove kernel from going into the rootfs
+  - Linux kernel optimization (custom defconfig or configuration fragments)
+  - Linux kernel device tree overlay recipe
+  - Linux kernel module recipe
+  - Boot time optimization
+  - Very minimal kernel defconfig
+  - Disable as much bootloader configs as possible
+  - Use as minimum init manager services as possible
