@@ -1,7 +1,7 @@
 header:
   version: 18
 machine: qemux86-64
-distro: rpi3-distro
+distro: tech-distro
 build_system: oe
 target: core-image-base
 repos:
@@ -40,15 +40,11 @@ local_conf_header:
         ACCEPT_FSL_EULA = "1"
         DL_DIR = "/home/hamza/yocto/work/downloads"
         SSTATE_DIR = "/home/hamza/yocto/work/sstate-cache"
-        BB_CURRENT_MC = "default"
-        SPDX_GENERATE = "0"
         INHERIT:remove = "create-spdx"
         INHERIT += "buildhistory"
         BUILDHISTORY_COMMIT = "1"
         INHERIT += "cve-check"
-        PREFERRED_PROVIDER_tar = "busybox"
-        PREFERRED_PROVIDER_coreutils = "busybox"
-        INCOMPATIBLE_LICENSE = "GPL-3.0* LGPL-3.0* AGPL-3.0*"
+        
         
         
 
