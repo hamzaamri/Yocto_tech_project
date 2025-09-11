@@ -1,0 +1,1 @@
+hamza-user ALL=(ALL) NOPASSWD: /bin/systemctl, /bin/reboot
