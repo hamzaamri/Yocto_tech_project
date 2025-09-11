@@ -14,6 +14,7 @@ local_conf_header:
         INHERIT += "buildhistory"
         BUILDHISTORY_COMMIT = "1"
         INHERIT += "cve-check"
+        
     diskmon: |
         BB_DISKMON_DIRS = "\
         STOPTASKS,${TMPDIR},1G,100K \
