@@ -1,12 +1,12 @@
 header:
   version: 18
   includes:
-    -Kas/include/local.yml
-    -Kas/include/oe.yml
-machine: qemux86-64
+    - Kas/include/local.yml
+    - Kas/include/oe.yml
+machine: rpi3-tech
 distro: tech-distro
 build_system: oe
-target: core-image-base
+target: base-image
 repos:
   meta_raspberrypi:
     url: "https://github.com/agherzan/meta-raspberrypi.git"
