@@ -23,6 +23,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     cpio python3-pexpect xz-utils debianutils iputils-ping \
     python3-git python3-jinja2 libegl1-mesa-dev libgl-dev pylint xterm tar locales \
     bzip2 liblz4-tool zstd lz4 libarchive-tools \
+    whois \
     && pip3 install --no-cache-dir subunit testtools \
     && rm -rf /var/lib/apt/lists/*
 
