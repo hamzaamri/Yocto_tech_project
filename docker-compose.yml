@@ -6,10 +6,10 @@ services:
     container_name: tech_project
     network_mode: host
     volumes:
-      - /home/hamza/yocto/tech_prj:/home/yocto/tech_prj
-      - /home/hamza/yocto/layers:/home/yocto/layers
-      - /home/hamza/yocto/work/downloads:/home/yocto/work/downloads
-      - /home/hamza/yocto/work/sstate-cache:/home/yocto/work/sstate-cache
+      - ${HOME}yocto/tech_prj:/home/yocto/tech_prj
+      - ${HOME}/yocto/layers:/home/yocto/layers
+      - ${HOME}/yocto/work/downloads:/home/yocto/work/downloads
+      - ${HOME}/yocto/work/sstate-cache:/home/yocto/work/sstate-cache
       - /dev/log:/dev/log
       - /etc/image-buildinfo:/etc/image-buildinfo
     stdin_open: true
