@@ -64,7 +64,6 @@ Run the entrypoint script to build:
 This script will:
 
 1-Run kas build to build the Yocto image defined in your Kas configuration.
-
 2-Drop you into a kas shell for interactive work in the Yocto environment.
 ---
 
