@@ -1,10 +1,20 @@
-# TECH_PRJ
+# YOCTO_TECH_PROJECT – Yocto Learning Project
 
-This project uses Docker Compose to set up the build environment for Yocto with **Kas**.
+This project aims to learn and practice different aspects and critical tasks in Yocto, such as building images, experimenting with layers, writing recipes, and testing system customization.
 
----
+The environment is containerized with Docker Compose and uses Kas to simplify Yocto builds.
 
-## Quick Start
+## Project Goals
+
+1-Practice setting up and building Yocto images.
+
+2-Learn how to manage layers, recipes, and machine configurations.
+
+3-Explore common embedded Linux tasks: kernel configuration, bootloaders, user management, sudoers configuration, CVE checks, etc.
+
+4-Use Kas for reproducible builds and portable environments.
+
+5-Run everything inside Docker for a clean and isolated setup.
 
 ### 1. Enter the project folder
 
@@ -53,9 +63,9 @@ Run the entrypoint script to build:
 ```
 This script will:
 
-Run kas build to build the Yocto image based on your configuration.
+1-Run kas build to build the Yocto image defined in your Kas configuration.
 
-Drop you into a kas shell for interactive work in the build environment.
+2-Drop you into a kas shell for interactive work in the Yocto environment.
 ---
 
 ## Notes
