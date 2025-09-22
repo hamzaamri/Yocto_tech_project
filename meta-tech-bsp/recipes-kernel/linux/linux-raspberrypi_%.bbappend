@@ -7,7 +7,7 @@ SRC_URI += "file://defconfig"
 SRC_URI += "file://powersave.cfg"
 SRC_URI += "file://virtualisation.cfg"
 
-Add defconfig to kernel_defconfig
+# Add defconfig to kernel_defconfig
 KERNEL_DEFCONFIG = "defconfig"
 
 # Add fragments to kernel config
