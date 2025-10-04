@@ -6,7 +6,7 @@ services:
     container_name: tech_project
     network_mode: host
     volumes:
-      - ${HOME}yocto/tech_prj:/home/yocto/tech_prj
+      - ${HOME}/yocto/tech_prj:/home/yocto/tech_prj
       - ${HOME}/yocto/layers:/home/yocto/layers
       - ${HOME}/yocto/work/downloads:/home/yocto/work/downloads
       - ${HOME}/yocto/work/sstate-cache:/home/yocto/work/sstate-cache
