@@ -4,12 +4,16 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/${BPN}:"
 SRC_URI += "file://defconfig"
 
 # Add extra fragments
-SRC_URI += "file://powersave.cfg"
-SRC_URI += "file://virtualisation.cfg"
+SRC_URI:append = "\
+     file://powersave.cfg \
+     file://virtualisation.cfg \
+     file://AHT10.cfg"
 
 # Add defconfig to kernel_defconfig
 KERNEL_DEFCONFIG = "defconfig"
 
 # Add fragments to kernel config
-KERNEL_CONFIG_FRAGMENTS += "${WORKDIR}/powersave.cfg"
-KERNEL_CONFIG_FRAGMENTS += "${WORKDIR}/virtualisation.cfg"
+KERNEL_CONFIG_FRAGMENTS:append = "\
+     ${WORKDIR}/powersave.cfg \
+     ${WORKDIR}/virtualisation.cfg \
+     ${WORKDIR}/AHT10.cfg"
